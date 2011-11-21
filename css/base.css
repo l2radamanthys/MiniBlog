@@ -5,6 +5,9 @@ body {
     width: 1024px;
 }
 
+a {
+    text-decoration: None;
+}
 
 .secundario {
     width: 200px;
@@ -13,11 +16,90 @@ body {
     float: left;
 }
 
+.secundario h3 {
+    background-color: #0080C0;
+    color: #FFF;
+    margin: 0px;
+}
+
+
 .primario {
     margin-left: 20px;
     width: 780px;
     border: 1px solid #AAA;
+    padding: 10px;
     min-height: 500px;
     float: left;
+}
+
+
+.post_cont {
+    font-size: 12px;
+    text-align: left;
+    margin: 10px;
+    padding: 3px;
+    border: 1px solid #A6D2FF;
+    
+}
+
+.post_cont h2 {
+    font-size: 16px;
+    font-weight: 100;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu {
+    padding: 0px;
+    margin: 3px;
+    text-align: left;
+    list-style: None;
+}
+
+.menu li {
+    border: 1px solid #8080C0;
+    margin-bottom: 1px;
+    padding-left: 5px;
+}
+
+
+.menu li a {
+    font-size: 11px;
+}
+
+
+
+.edt, .edt_c, .edt_m, .edt_g {
+    border: 1px solid #A7A7A7;
+}
+
+.edt_g {
+    width: 400px;
+}
+
+.page_num {
+    font-size: 10px;
+    text-decoration: None;
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 2px;
+    border: 1px solid #0080FF;
+    color: #0080FF;
+}
+
+.page_select {
+    font-size: 10px;
+    text-decoration: None;
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 2px;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.page_select:hover, .page_num:hover {
+    background-color: #FFFF00;
 }
 
