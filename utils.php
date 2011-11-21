@@ -39,5 +39,18 @@ function insert_reference($conn, $tag_name, $post_id) {
     }
 }
 
+function tag_list($conn) {
+    //escribe el listado de tags
+    $query = "SELECT * FROM `tags`";
+    $result = mysql_query($query, $conn);
+    while ($tag = mysql_fetch_assoc($result)) {
+        echo "<a href='listado-tags.php?tag=".$tag["name"]."' class='tag_link'>".$tag["name"]."</a>\n";
+    }
+}
+
+function older_post_list($conn, $limit=5) {
+    //escribe el listado de tags
+    $query = "";
+}
 
 ?>

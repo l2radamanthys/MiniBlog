@@ -103,3 +103,7 @@ a {
     background-color: #FFFF00;
 }
 
+.tag_link {
+    font-size: 10px;
+    margin-left: 3px;
+}

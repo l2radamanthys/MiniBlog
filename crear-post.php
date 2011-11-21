@@ -1,8 +1,8 @@
 <?php
 include("bd_utils.php");
 include("utils.php");
+$conn = conectar_bd();
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -18,13 +18,27 @@ include("utils.php");
 <div align="center">
     <!-- secundario -->
     <div class="secundario">
+        <h3>Menu</h3>
+        <ul class="menu">
+            <li><a href="listado-post.php">Listado de Post</a></li>
+            <li><a href="nuevo-post.php">Nuevo Post</a></li>
+        </ul>
+
+        <h3>Listado Tags</h3>
+        <?php
+            tag_list($conn);
+        ?>
+        <h3>Ultimos Post</h3>
+        <?php
+            older_post_list($conn);
+        ?>
     </div>
 
     <!-- cuerpo documento -->
     <div class="primario">
 
     <?php
-        $conn = conectar_bd();
+        //$conn = conectar_bd();
 
         if (isset($_POST["titulo"])) {
             $title = $_POST["titulo"];

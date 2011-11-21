@@ -1,5 +1,7 @@
 <?php
 include("bd_utils.php");
+include("utils.php");
+$conn = conectar_bd();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -17,10 +19,20 @@ include("bd_utils.php");
 <div align="center">
     <!-- secundario -->
     <div class="secundario">
+        <h3>Menu</h3>
+        <ul class="menu">
+            <li><a href="listado-post.php">Listado de Post</a></li>
+            <li><a href="nuevo-post.php">Nuevo Post</a></li>
+        </ul>
+
         <h3>Listado Tags</h3>
-        
+        <?php
+            tag_list($conn);
+        ?>
         <h3>Ultimos Post</h3>
-    
+        <?php
+            older_post_list($conn);
+        ?>
     </div>
 
     <!-- cuerpo documento -->
@@ -28,7 +40,7 @@ include("bd_utils.php");
 
     <?php
     //paginacion
-    $conn = conectar_bd();
+    //$conn = conectar_bd();
     $query = "SELECT * FROM `posts`";
     $result = mysql_query($query, $conn);
     $NUM_POST = mysql_num_rows($result); //cantidad total de post
