@@ -1,0 +1,23 @@
+body {
+    font-family: Verdana, Geneva;
+    margin:0 auto;
+    margin-top:30px;
+    width: 1024px;
+}
+
+
+.secundario {
+    width: 200px;
+    border: 1px solid #AAA;
+    min-height: 500px;
+    float: left;
+}
+
+.primario {
+    margin-left: 20px;
+    width: 780px;
+    border: 1px solid #AAA;
+    min-height: 500px;
+    float: left;
+}
+
